@@ -4,6 +4,7 @@ import com.bhushan.linkedIn.notification_service.clients.ConnectionsClient;
 import com.bhushan.linkedIn.notification_service.dto.PersonDto;
 import com.bhushan.linkedIn.notification_service.entity.Notification;
 import com.bhushan.linkedIn.notification_service.repository.NotificationRepository;
+import com.bhushan.linkedIn.notification_service.service.SendNotification;
 import com.bhushan.linkedIn.posts_service.event.PostCreatedEvent;
 import com.bhushan.linkedIn.posts_service.event.PostLikedEvent;
 import lombok.RequiredArgsConstructor;
@@ -19,7 +20,7 @@ import java.util.List;
 public class PostServiceConsumer {
 
     private final ConnectionsClient connectionsClient;
-    private final NotificationRepository notificationRepository;
+    private final SendNotification sendNotification;
 
     @KafkaListener(topics = "post-created-topic")
     public void handlePostCreated(PostCreatedEvent postCreatedEvent){
@@ -28,7 +29,7 @@ public class PostServiceConsumer {
         List<PersonDto> connections = connectionsClient.getFirstConnections(postCreatedEvent.getCreatorId());
 
         for(PersonDto connection : connections){
-            sendNotification(connection.getUserId(),"Your connection "+postCreatedEvent.getCreatorId()+" has created a post," +
+            sendNotification.send(connection.getUserId(),"Your connection "+postCreatedEvent.getCreatorId()+" has created a post," +
                     " check it out");
         }
     }
@@ -39,16 +40,8 @@ public class PostServiceConsumer {
         String message = String.format("Your post, %d has been liked by %d", postLikedEvent.getPostId(),
                 postLikedEvent.getLikedByUserId());
 
-        sendNotification(postLikedEvent.getCreatorId(), message);
+        sendNotification.send(postLikedEvent.getCreatorId(), message);
     }
 
-    public void sendNotification(Long userId, String message){
-        Notification notification = new Notification();
-        notification.setMessage(message);
-        notification.setUserId(userId);
-
-        notificationRepository.save(notification);
-
-    }
 
 }
