@@ -1,4 +1,4 @@
-package com.bhushan.linkedIn.connections_service.event;
+package com.bhushan.linkedin.connections_service.event;
 
 
 import lombok.Builder;

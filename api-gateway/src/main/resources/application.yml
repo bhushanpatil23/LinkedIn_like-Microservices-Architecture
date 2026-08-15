@@ -35,3 +35,8 @@ spring:
           filters:
             - StripPrefix=2
             - name: AuthenticationFilter
+logging:
+  level:
+    org.springframework.cloud.gateway: DEBUG
+    org.springframework.cloud.loadbalancer: DEBUG
+    reactor.netty: DEBUG

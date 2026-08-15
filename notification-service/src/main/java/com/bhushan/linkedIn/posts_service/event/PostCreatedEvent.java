@@ -1,4 +1,4 @@
-package com.bhushan.linkedIn.posts_service.event;
+package com.bhushan.linkedin.posts_service.event;
 
 import lombok.Builder;
 import lombok.Data;
