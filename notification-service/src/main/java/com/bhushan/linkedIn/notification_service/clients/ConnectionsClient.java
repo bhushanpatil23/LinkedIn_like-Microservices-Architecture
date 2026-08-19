@@ -1,6 +1,6 @@
-package com.bhushan.linkedIn.notification_service.clients;
+package com.bhushan.linkedin.notification_service.clients;
 
-import com.bhushan.linkedIn.notification_service.dto.PersonDto;
+import com.bhushan.linkedin.notification_service.dto.PersonDto;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestHeader;

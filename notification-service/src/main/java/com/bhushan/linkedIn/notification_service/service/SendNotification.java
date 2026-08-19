@@ -1,7 +1,7 @@
-package com.bhushan.linkedIn.notification_service.service;
+package com.bhushan.linkedin.notification_service.service;
 
-import com.bhushan.linkedIn.notification_service.entity.Notification;
-import com.bhushan.linkedIn.notification_service.repository.NotificationRepository;
+import com.bhushan.linkedin.notification_service.entity.Notification;
+import com.bhushan.linkedin.notification_service.repository.NotificationRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 

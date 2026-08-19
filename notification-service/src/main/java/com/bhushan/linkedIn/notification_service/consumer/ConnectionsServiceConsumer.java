@@ -1,6 +1,6 @@
 package com.bhushan.linkedin.notification_service.consumer;
 
-import com.bhushan.linkedIn.notification_service.service.SendNotification;
+import com.bhushan.linkedin.notification_service.service.SendNotification;
 import com.bhushan.linkedin.connections_service.event.AcceptConnectionRequestEvent;
 import com.bhushan.linkedin.connections_service.event.SendConnectionRequestEvent;
 import lombok.RequiredArgsConstructor;

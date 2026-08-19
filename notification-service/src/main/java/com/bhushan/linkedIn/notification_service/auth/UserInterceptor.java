@@ -1,6 +1,6 @@
-package com.bhushan.linkedIn.notification_service.auth;
+package com.bhushan.linkedin.notification_service.auth;
 
-import com.bhushan.linkedIn.notification_service.auth.UserContextHolder;
+import com.bhushan.linkedin.notification_service.auth.UserContextHolder;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import org.springframework.stereotype.Component;

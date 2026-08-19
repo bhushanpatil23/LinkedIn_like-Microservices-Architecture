@@ -1,4 +1,4 @@
-package com.bhushan.linkedIn.notification_service.dto;
+package com.bhushan.linkedin.notification_service.dto;
 
 import lombok.Data;
 

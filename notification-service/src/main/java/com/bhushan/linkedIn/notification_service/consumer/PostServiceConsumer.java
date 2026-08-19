@@ -1,10 +1,10 @@
 package com.bhushan.linkedin.notification_service.consumer;
 
-import com.bhushan.linkedIn.notification_service.clients.ConnectionsClient;
-import com.bhushan.linkedIn.notification_service.dto.PersonDto;
-import com.bhushan.linkedIn.notification_service.entity.Notification;
-import com.bhushan.linkedIn.notification_service.repository.NotificationRepository;
-import com.bhushan.linkedIn.notification_service.service.SendNotification;
+import com.bhushan.linkedin.notification_service.clients.ConnectionsClient;
+import com.bhushan.linkedin.notification_service.dto.PersonDto;
+import com.bhushan.linkedin.notification_service.entity.Notification;
+import com.bhushan.linkedin.notification_service.repository.NotificationRepository;
+import com.bhushan.linkedin.notification_service.service.SendNotification;
 import com.bhushan.linkedIn.posts_service.event.PostLikedEvent;
 import com.bhushan.linkedin.posts_service.event.PostCreatedEvent;
 import lombok.RequiredArgsConstructor;

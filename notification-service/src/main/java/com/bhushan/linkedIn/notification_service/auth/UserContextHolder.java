@@ -1,4 +1,4 @@
-package com.bhushan.linkedIn.notification_service.auth;
+package com.bhushan.linkedin.notification_service.auth;
 
 public class UserContextHolder {
 

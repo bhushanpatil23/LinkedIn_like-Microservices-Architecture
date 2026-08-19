@@ -1,4 +1,4 @@
-package com.bhushan.linkedIn.notification_service.entity;
+package com.bhushan.linkedin.notification_service.entity;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
